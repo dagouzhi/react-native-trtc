@@ -82,7 +82,7 @@ RCT_EXPORT_METHOD(enterRoom:(NSDictionary *)options scene:(int) scene){
     TRTCParams *param = [[TRTCParams alloc] init];
     param.sdkAppId = [options[@"sdkAppId"] intValue];
     param.userId = options[@"userId"];
-    param.roomId = [options[@"roomId"] intValue];
+    param.channel = [options[@"strRoomId"] NSString];
     param.userSig = options[@"userSig"];
     if ([options objectForKey:@"privateMapKey"]) {
         param.privateMapKey = options[@"privateMapKey"];
